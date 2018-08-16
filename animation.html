@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	.content{
+		width:3840px;
+		height:700px;
+		/*border:1px solid black;*//*
+		position:relative;
+		top:0;
+		left: 0;*/
+		display: inline-block;	
+		/*float:left;*/
+		background-image: url(images/2.jpg);
+		animation:bg 50s linear infinite;
+	}/*
+	.hidden{
+		width:3840px;
+		height:500px;
+		background: url(images/2.jpg);
+	}*/
+	.bbox{
+		width:3600px;
+		margin:400px auto 0;
+		
+		/*overflow: hidden;*/
+	}
+	.box{
+		float: left;
+		
+	}
+	.box1{
+		background:url(images/west_01_3ca39fe.png)  no-repeat;
+		margin-left: 200px;
+		width:200px;
+		height:180px;
+		animation-name:walk;
+		animation-duration:1s;
+		animation-iteration-count: infinite;
+		animation-timing-function: steps(7);
+	}
+	.box2{
+		background:url(images/west_02_47bad19.png) 0 0 no-repeat;
+		width:200px;
+		height:180px;
+		animation-name:walk;
+		/*border:1px solid black;*/
+		animation-duration:1s;
+		animation-iteration-count: infinite;
+		animation-timing-function: steps(7);
+	}
+	.box3{
+		background:url(images/west_03_f962447.png) 0 0 no-repeat;
+		width:170px;
+		height:180px;
+		margin-top:-30px;
+		/*border:1px solid black;*/
+		animation-name:hwalk;
+		animation-duration:1s;
+		animation-iteration-count: infinite;
+		animation-timing-function: steps(7);
+	}
+	.box4{
+		background:url(images/west_04_6516d80.png) 0 0 no-repeat;
+		width:210px;
+		height:200px;
+		animation-name:swalk;
+		animation-duration:1s;
+		animation-iteration-count: infinite;
+		animation-timing-function: steps(7);
+	}
+	@keyframes walk{
+		0%{
+			background-position:0 0;
+		}
+		100%{
+			background-position:-1400px 0;
+		}
+	}
+	@keyframes hwalk{
+		0%{
+			background-position:0 0;
+		}
+		100%{
+			background-position:-1190px 0;
+		}
+	}
+	@keyframes swalk{
+		0%{
+			background-position:0 0;
+		}
+		100%{
+			background-position:-1470px 0;
+		}
+	}
+	@keyframes bg{
+		0%{
+			background-position:0 0;
+		}
+		/*10%{
+			background-position:-10% 0;
+		}
+		20%{
+			background-position:-20% 0;
+		}*/
+		100%{
+			background-position:100% 0;
+		}
+	}
+</style>
+<body>
+	<div class="content">
+		<div class="bbox">
+			<div class="box1 box"></div>
+			<div class="box2 box"></div>
+			<div class="box3 box"></div>
+			<div class="box4 box"></div>
+		</div>
+	</div>
+	<div class="hidden"></div>
+</body>
+</html>
